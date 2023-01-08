@@ -12,9 +12,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const app = express();
-app.use(cors(
-    config.application.cors.server
-));
+app.use(cors());
 app.use(express.json());
 
 app.get('/', async(req, res) => {
